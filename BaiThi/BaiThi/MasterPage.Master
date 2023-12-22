@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BaiThi.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <style>
+                div{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    margin:15px 0;
+                }
+            </style>
+            <table border="1" style="width:100%">
+                <tr >
+                    <td style="width:30%;text-align:center">
+                        <asp:Image ID="Image1" Width="100" runat="server" ImageUrl="~/Image/logo.jpg" />
+                    </td>
+                    <td style="width:70%; text-align:center">
+                        TRƯỜNG CAO ĐẲNG CÔNG THƯƠNG VIỆT NAM
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/CapNhat.aspx">Cập nhật</asp:HyperLink><br />
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/TimKiem.aspx.cs">Tìm kiếm</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <asp:Label ID="Label1" runat="server" Text="VI VĂN HOÀNG - CCN04.6B"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
